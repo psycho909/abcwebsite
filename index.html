@@ -17,7 +17,7 @@
 	width: 100%;
 	background-color: #ddd;
 	position: fixed;
-	top: -52px;
+	top: -75px;
 	left: 0;
 	z-index: 16;
 	padding: 22px
@@ -935,13 +935,13 @@ $('.search-icon').on('click',function(){
 	}else{
 		$(this).removeClass('fa-times').addClass('fa-search');
 		$('#search-bar').animate({
-			top:-52+'px'
+			top:-75+'px'
 		});
 		i--;
 	}
 	console.log(i);
 })
-$('.btn-login-control').on('click',function(){
+$('.btn-login-control,.user-icon').on('click',function(){
 	$('#member').show();
 	$('#member .login-box').removeClass('hidden').addClass('show');
 })
