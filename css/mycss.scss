@@ -14,6 +14,9 @@ body{
 	background-color:#686868;
 	background-image: url('../images/point.png');
 }
+.member-box{
+    width: 300px;
+}
 .navbar-user{
 	height: 78px;
 	border:none;
@@ -602,6 +605,9 @@ footer{
 	.col-sm-1-5{
         width: 20%;
         float: left;
+    }
+    .member-box{
+    	width: 360px;
     }
 	.navbar-user {
 		height: 78px;

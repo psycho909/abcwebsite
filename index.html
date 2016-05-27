@@ -5,14 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>J'STUDY留日情報華文國際網__日本留學第一站</title>
+<title>sadsad</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?20160314"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css?20160314">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js?20160314"></script>
 <script src="js/carousel-swipe.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="Bookmark" href="images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="css/mycss.css">
 <style>
 #search-bar{
@@ -21,11 +19,92 @@
 	position: fixed;
 	top: -52px;
 	left: 0;
-	z-index: 5;
+	z-index: 16;
 	padding: 22px
 }
 #search-form{
 	margin-bottom: 12px;
+}
+.hot-key a{
+	margin-left: 6px;
+}
+#member{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1031;
+	display: none;
+}
+.member-box{
+	background-color: #ededed;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	border-radius: 6px;
+	padding: 16px 1px;
+}
+.login-logo{
+	width: 100%;
+}
+.login-logo a{
+	display: block;
+	width: 84px;
+	height: 84px;
+	margin: 0 auto;
+}
+.login-logo a img{
+	width: 84px;
+	height: 84px;
+}
+.login-box,
+.sign-box{
+	padding:0 16px;
+}
+.input-box{
+	margin: 16px 0;
+}
+.input-box input{
+	height: 46px;
+}
+.user-icon-box{
+	padding: 6px 17px;
+}
+.email-icon-box{
+	padding: 6px 15px;
+}
+.password-icon-box{
+	padding: 6px 18px;
+}
+.btn-login{
+	width: 100%;
+}
+.login-added,
+.sign-added{
+	margin: 16px 0;
+}
+.login-added a{
+	display: block;
+}
+.conset-box{
+	text-align: center;
+	margin-bottom: 16px;
+}
+.close-box{
+	width:22px;
+	height: 22px;
+	text-align: center;
+	line-height: 19px;
+	border-radius:50%;
+	background-color: #000;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	color: #fff;
+	cursor: pointer;
 }
 </style>
 </head>
@@ -45,7 +124,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 hot-key">
 				人氣關鍵字：
 				<a href="#">PS4.5??</a>
 				<a href="#">OVERWATCH</a>
@@ -57,12 +136,86 @@
 	</div>
 </section>
 
+<section id="member">
+	<div class="member-box">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="login-logo">
+				<a href="#"><img src="images/logo-icon.png" alt=""></a>
+			</div>
+		</div>
+		<div class="col-md-12 col-sm-12 col-xs-12 login-box hidden">
+			<form action="">
+				<div class="input-group input-box">
+					<input type="text" id="username" name="username" class="form-control" placeholder="用戶名或E-mail...">
+					<span class="input-group-addon user-icon-box">
+						<i class="fa fa-user login-icon" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="input-group input-box">
+					<input type="password" id="password" name="password" class="form-control" placeholder="密碼...">
+					<span class="input-group-addon password-icon-box">
+						<i class="fa fa-lock login-icon" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="checkbox">
+				    <label>
+				    	<input type="checkbox"> 記住帳號
+				    </label>
+				</div>
+				<button type="button" class="btn btn-primary btn-login">登錄</button>
+				<div class="login-added">
+					<div class="pull-left">
+						<a href="#">忘記密碼</a>
+					</div>
+					<div class="pull-right">
+						<a href="javascript:;" class="sign-now">註冊新用戶</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-12 col-sm-12 col-xs-12 sign-box hidden">
+			<form action="">
+				<div class="input-group input-box">
+					<input type="text" id="username" name="username" class="form-control" placeholder="請輸入用戶名...">
+					<span class="input-group-addon user-icon-box">
+						<i class="fa fa-user sign-icon" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="input-group input-box">
+					<input type="email" id="email" name="email" class="form-control" placeholder="請輸入E-mail...">
+					<span class="input-group-addon email-icon-box">
+						<i class="fa fa-envelope-o sign-icon" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="input-group input-box">
+					<input type="password" id="password" name="password" class="form-control" placeholder="請輸入密碼...">
+					<span class="input-group-addon password-icon-box">
+						<i class="fa fa-lock sign-icon" aria-hidden="true"></i>
+					</span>
+				</div>
+				<div class="conset-box">
+				    <span>點擊註冊即表明您同意本 <a href="#">服務條款</a> 和 <a href="#">隱私條款</a>。</span>
+				</div>
+				<button type="button" class="btn btn-primary btn-login">登錄</button>
+				<div class="sign-added">
+					<div class="pull-left">
+						已有帳號？<a href="javascript:;" class="login-now">立即登錄</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="close-box">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</div>
+	</div>
+</section>
+
 <header>
 	<div class="header-main">
 		<div class="navbar navbar-default navbar-user navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed icon-bar-con active" data-toggle="collapse" data-target="#navbar-main">
+					<button type="button" class="navbar-toggle collapsed icon-bar-con" data-toggle="collapse" data-target="#navbar-main">
 						<span class="sr-only">MENU</span>
 				        <span class="icon-bar icon-bar-a"></span>
 				        <span class="icon-bar icon-bar-b"></span>
@@ -107,8 +260,8 @@
 					<div class="nav navbar-nav navbar-right hidden-xs navbar-btn">
 						<a class="search-icon fa fa-search" href="javascript:; "></a>
 						<a class="fa fa-user hidden-lg hidden-md user-icon" href="javascript:;"></a>
-						<a class="btn btn-primary hidden-sm" href="javascript:; ">登錄</a>
-						<a class="btn btn-success hidden-sm" href="javascript:; ">註冊</a>
+						<a class="btn btn-primary hidden-sm btn-login-control" href="javascript:; ">登錄</a>
+						<a class="btn btn-success hidden-sm btn-sign-control" href="javascript:; ">註冊</a>
 					</div>
 				</div>
 			</div>
@@ -203,7 +356,7 @@
 			<div class="col-md-6 news-talk-col">
 				<div class="news-talk-box">
 					<ul class="nav nav-tabs news-talk-tabs">
-						<li role="presentation" class="active"><a href="#school-up" data-toggle="tab">FunnyPlay更新情報</a></li>
+						<li role="presentation" class="active"><a href="#school-up" data-toggle="tab">FunnyPlay情報</a></li>
     					<li role="presentation"><a href="#news-talk" data-toggle="tab">知名人士經驗談</a></li>
 					</ul>
 					<div class="tab-content news-talk-content">
@@ -769,6 +922,9 @@
 </footer>
 <script>
 var i=0;
+$('.icon-bar-con').on('click',function(){
+	$(this).toggleClass('active');
+})
 $('.search-icon').on('click',function(){
 	if(i==0){
 		$(this).removeClass('fa-search').addClass('fa-times');
@@ -784,6 +940,27 @@ $('.search-icon').on('click',function(){
 		i--;
 	}
 	console.log(i);
+})
+$('.btn-login-control').on('click',function(){
+	$('#member').show();
+	$('#member .login-box').removeClass('hidden').addClass('show');
+})
+$('.btn-sign-control').on('click',function(){
+	$('#member').show();
+	$('#member .sign-box').removeClass('hidden').addClass('show');
+})
+$('.login-now').on('click',function(){
+	$('.sign-box').removeClass('show').addClass('hidden');
+	$('.login-box').removeClass('hidden').addClass('show');
+})
+$('.sign-now').on('click',function(){
+	$('.login-box').removeClass('show').addClass('hidden');
+	$('.sign-box').removeClass('hidden').addClass('show');
+})
+$('.close-box').on('click',function(){
+	$('#member').hide();
+	$('#member .sign-box').removeClass('show').addClass('hidden');
+	$('#member .login-box').removeClass('show').addClass('hidden');
 })
 $('#bigbanner-carousel,#school-photo-carousel,#ad-carousel-1,#ad-carousel-2').carousel({
   interval: 4000

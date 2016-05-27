@@ -16,6 +16,10 @@ body {
   background-image: url("../images/point.png");
 }
 
+.member-box {
+  width: 300px;
+}
+
 .navbar-user {
   height: 78px;
   border: none;
@@ -595,6 +599,10 @@ footer .btn-banner-bar img {
   .col-sm-1-5 {
     width: 20%;
     float: left;
+  }
+
+  .member-box {
+    width: 360px;
   }
 
   .navbar-user {
