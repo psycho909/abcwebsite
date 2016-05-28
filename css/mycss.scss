@@ -14,9 +14,101 @@ body{
 	background-color:#686868;
 	background-image: url('../images/point.png');
 }
-.member-box{
-    width: 300px;
+#search-bar{
+	width: 100%;
+	background-color: #f2f2f2;
+	position: fixed;
+	top: -75px;
+	left: 0;
+	z-index: 16;
+	padding: 22px;
+	#search-form{
+		margin-bottom: 12px;
+	}
+	.hot-key a{
+		margin-left: 6px;
+	}
 }
+#member{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1031;
+	display: none;
+	.member-box{
+		width: 300px;
+		background-color: #ededed;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		border-radius: 6px;
+		padding: 16px 1px;
+		.login-logo{
+			width: 100%;
+			a{
+				display: block;
+				width: 84px;
+				height: 84px;
+				margin: 0 auto;
+				img{
+					width: 84px;
+				height: 84px;
+				}
+			}
+		}
+		.login-box,
+		.sign-box{
+			padding:0 16px;
+		}
+		.input-box{
+			margin: 16px 0;
+		}
+		.input-box input{
+			height: 46px;
+		}
+		.user-icon-box{
+			padding: 6px 17px;
+		}
+		.email-icon-box{
+			padding: 6px 15px;
+		}
+		.password-icon-box{
+			padding: 6px 18px;
+		}
+		.btn-login{
+			width: 100%;
+		}
+		.login-added,
+		.sign-added{
+			margin: 16px 0;
+		}
+		.login-added a{
+			display: block;
+		}
+		.conset-box{
+			text-align: center;
+			margin-bottom: 16px;
+		}
+		.close-box{
+			width:22px;
+			height: 22px;
+			text-align: center;
+			line-height: 19px;
+			border-radius:50%;
+			background-color: #000;
+			position: absolute;
+			top: 6px;
+			right: 6px;
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+}
+
 .navbar-user{
 	height: 78px;
 	border:none;
@@ -25,8 +117,14 @@ body{
 	.navbar-toggle{
 		margin-top: 22px;
 		margin-bottom: 0;
+		border-color:transparent;
+		&:focus,
+		&:hover{
+			background-color: transparent;
+		}
 		.icon-bar{
 			transition:all .5s;
+			background-color: #9d002b;
 		}
 		&.icon-bar-con{
 			z-index: 999;
@@ -63,8 +161,15 @@ body{
 		}
 	}
 	#navbar-main{
-		background-color: #ddd;
+		background-color: #f2f2f2;
+		border-bottom: 1px solid #ccc;
 		.navbar-nav{
+			.open{
+				> a > .caret{
+					transform:rotate(180deg);
+					transition:all .3s;
+				}
+			}
 			margin: 0 0;
 			.dropdown > a{
 				line-height: 20px;
@@ -72,8 +177,11 @@ body{
 				color:#334854;
 				position: relative;
 				transition:all .5s;
+				> .caret{
+					transition:all .3s;
+				}
 				&:hover{
-					color:#E04462;
+					color:#b64e69;
 					&:hover:before{
 						opacity: 0;
 					}
@@ -85,14 +193,14 @@ body{
 					height: 3px;
 					top: 0;
 					left: 0;
-					background-color: #F9C535;
+					background-color: #437155;
 					opacity: 0;
 					transition:all .5s;
 				}
 			}
 			> .active > a{
 				background-color: transparent;
-				color:#E04462;
+				color:#9d002b;
 				&:before{
 					opacity: 0;
 				}
@@ -112,7 +220,7 @@ body{
 	}
 	.user-icon{
 		padding: 9px 12px;
-		border:1px solid #ccc;
+		border:1px solid #23527c;
 		border-radius: 50%;
 	}
 }
@@ -127,6 +235,16 @@ body{
 	.carousel-control.left,
 	.carousel-control.right{
 		background-image: none;
+	}
+	#bigbanner-carousel ol li{
+		&.active{
+			background-color: #133268;
+			margin: 0px 4px;
+		}
+		width: 12px;
+		height: 12px;
+		border:1px solid #133268;
+		margin: 0px 4px;
 	}
 	.bigbanner-bg{
 		display: block;
@@ -304,19 +422,19 @@ body{
 					min-height: 116px;
 				}
 				&:nth-child(1) .banner-bg{
-					background: url('https://unsplash.it/1200/800/?image=1084') no-repeat center;
+					background: url('../images/banner/b01.jpg') no-repeat center;
 					background-size: cover;
 				}
 				&:nth-child(2) .banner-bg{
-					background: url('https://unsplash.it/1200/800/?image=1080') no-repeat center;
+					background: url('../images/banner/b02.jpg') no-repeat center;
 					background-size: cover;
 				}
 				&:nth-child(3) .banner-bg{
-					background: url('https://unsplash.it/1200/800/?image=1074') no-repeat center;
+					background: url('../images/banner/b03.jpg') no-repeat center;
 					background-size: cover;
 				}
 				&:nth-child(4) .banner-bg{
-					background: url('https://unsplash.it/1200/800/?image=1062') no-repeat center;
+					background: url('../images/banner/b04.jpg') no-repeat center;
 					background-size: cover;
 				}
 			}
@@ -447,7 +565,7 @@ body{
 			}
 			.fa-google{
 				color:#f31841;
-				border: 2px solid #e9fd0a;
+				border: 2px solid #3c2f29;
 				&:hover{
 					background-color: #f31841;
 				}
@@ -540,7 +658,7 @@ body{
 }
 
 footer{
-	background-color: #272b35;
+	background-color: #b64e69;
 	color: #fff;
 	font-size: 10px;
 	.footer-list{
@@ -553,9 +671,9 @@ footer{
 		&:first-child{
 			color:#c2c2c2;
 			font-size:14px;
-			background-color: #303542;
+			background-color: #9D445A;
 			padding: 4px 12px;
-			box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+			box-shadow: 0 1px 5px #763344 inset, 0 1px 0 #6E2F3F;
 		}
 			list-style-type: none;
 			margin: 6px 0;
@@ -604,8 +722,10 @@ footer{
         width: 20%;
         float: left;
     }
-    .member-box{
-    	width: 360px;
+    #member{
+    	.member-box{
+	    	width: 360px;
+	    }
     }
 	.navbar-user {
 		height: 78px;
@@ -624,12 +744,13 @@ footer{
 		}
 		#navbar-main{
 			background-color: transparent;
+			border-bottom: none;
 			.navbar-nav{
 				.dropdown > a{
 					line-height: 78px;
 					padding: 0 15px;
 					&:hover{
-						color:#E04462;
+						color:#c76862;
 						&:hover:before{
 							opacity: 1;
 						}
@@ -641,7 +762,7 @@ footer{
 						height: 3px;
 						top: 0;
 						left: 0;
-						background-color: #F9C535;
+						background-color: #437155;
 						opacity: 0;
 						transition:all .5s;
 					}
